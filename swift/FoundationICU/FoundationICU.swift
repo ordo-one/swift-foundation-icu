@@ -13,3 +13,8 @@
 @_exported import ICUCommon
 @_exported import ICUI18N
 @_exported import ICUIO
+
+// Codable and Hashable conformance is required in swift-foundation,
+// but there are some compilation issues if that extension is declared
+// in the swift-foundation and build it as xcframework
+extension UATimeUnitStyle : Codable, Hashable {}
